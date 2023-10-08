@@ -1,0 +1,7 @@
+name: 'KotlinVsDart'
+
+environment:
+  sdk: '^3.1.0'
+
+dependencies:
+  collection: any
