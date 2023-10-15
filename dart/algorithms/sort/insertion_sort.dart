@@ -1,16 +1,17 @@
-List<int> insertSort(List<int> input) {
-  for (int i = 0; i < input.length; i++) {
+import 'package:collection/collection.dart';
 
-    final temp = input[i];
+List<int> insertSort(List<int> input) {
+  input.forEachIndexed((i, value) {
     int minIndex = i;
 
-    while(minIndex > 0 && temp < input[minIndex - 1]) {
+    // Scan all the elements back
+    while (minIndex > 0 && value < input[minIndex - 1]) {
       input[minIndex] = input[minIndex - 1];
       minIndex -= 1;
     }
 
-    input[minIndex] = temp;
-  }
+    input[minIndex] = value;
+  });
 
   return input;
 }
