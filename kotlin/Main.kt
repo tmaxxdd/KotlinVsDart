@@ -1,9 +1,10 @@
 import algorithms.sort.bubbleSort
 import algorithms.sort.insertionSort
+import algorithms.sort.mergeSort
 import kotlin.system.measureTimeMillis
 
-val input: List<Int> get() = listOf(0, 20, 0, -1, 3, 55)
-val expected: List<Int> get() = listOf(-1, 0, 0, 3, 20, 55)
+val input: List<Int> get() = listOf(0, 20, 0, -1, 3, Int.MAX_VALUE, 55)
+val expected: List<Int> get() = listOf(-1, 0, 0, 3, 20, 55, Int.MAX_VALUE)
 
 fun main() {
     sortWithTimeMillis(
@@ -17,6 +18,12 @@ fun main() {
         input = input,
         expected = expected,
     ) { insertionSort(it.toMutableList()) }
+
+    sortWithTimeMillis(
+        name = "Merge sort",
+        input = input,
+        expected = expected,
+    ) { mergeSort(it.toMutableList()) }
 }
 
 fun sortWithTimeMillis(
