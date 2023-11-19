@@ -2,9 +2,10 @@ import 'package:collection/collection.dart';
 
 import 'algorithms/sort/bubble_sort.dart';
 import 'algorithms/sort/insertion_sort.dart';
+import 'algorithms/sort/merging_sort.dart';
 
-get input => [0, 20, 0, -1, 3, 55];
-get expected => [-1, 0, 0, 3, 20, 55];
+get input => [0, 20, 0, -1, 3, double.maxFinite.toInt(), 55];
+get expected => [-1, 0, 0, 3, 20, 55, double.maxFinite.toInt()];
 
 void main() {
   sortWithStopwatch(
@@ -25,7 +26,7 @@ void main() {
     name: 'Merge sort',
     input: input,
     expected: expected,
-    operation: (input) => mergeSort(input),
+    operation: (input) => mergingSort(input),
   );
 }
 

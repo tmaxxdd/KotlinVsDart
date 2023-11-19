@@ -17,7 +17,7 @@ fun mergeSort(input: MutableList<Int>): MutableList<Int> {
     return merge(left, right)
 }
 
-fun merge(
+private fun merge(
     left: MutableList<Int>,
     right: MutableList<Int>,
 ): MutableList<Int> {
