@@ -20,6 +20,13 @@ void main() {
     expected: expected,
     operation: (input) => insertSort(input),
   );
+
+  sortWithStopwatch(
+    name: 'Merge sort',
+    input: input,
+    expected: expected,
+    operation: (input) => mergeSort(input),
+  );
 }
 
 void sortWithStopwatch({
