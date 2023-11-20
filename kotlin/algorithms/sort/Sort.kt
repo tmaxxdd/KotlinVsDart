@@ -1,6 +1,5 @@
-import algorithms.sort.bubbleSort
-import algorithms.sort.insertionSort
-import algorithms.sort.mergeSort
+package algorithms.sort
+
 import kotlin.system.measureTimeMillis
 
 val input: List<Int> get() = listOf(0, 20, 0, -1, 3, Int.MAX_VALUE, 55)
@@ -33,12 +32,12 @@ fun sortWithTimeMillis(
     operation: (List<Int>) -> List<Int>,
 ) {
     println(name)
-    println("Unsorted list $input")
+    println("Unsorted list: $input")
     var result: List<Int>
     val time = measureTimeMillis {
         result = operation(input)
     }
-    println("Sorted list $result")
+    println("Sorted list: $result")
     println("In time: $time millis")
     assert(result == expected)
     println()
