@@ -22,6 +22,14 @@ void main() {
     expectedIndex: expectedIndex,
     operation: (input, expectedValue) => binarySearch(input, expectedValue),
   );
+
+  searchWithStopwatch(
+    name: 'Jump search',
+    input: input,
+    expectedValue: expectedValue,
+    expectedIndex: expectedIndex,
+    operation: (input, expectedValue) => binarySearch(input, expectedValue),
+  );
 }
 
 void searchWithStopwatch({
