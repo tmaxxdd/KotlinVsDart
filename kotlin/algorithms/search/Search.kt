@@ -14,6 +14,14 @@ fun main() {
         expectedIndex = expectedIndex,
         operation = { input, expectedValue -> binarySearch(input, expectedValue) }
     )
+
+    searchWithTimeMillis(
+        name = "Jump search",
+        input = input,
+        expectedValue = expectedValue,
+        expectedIndex = expectedIndex,
+        operation = { input, expectedValue -> jumpSearch(input, expectedValue) }
+    )
 }
 
 fun searchWithTimeMillis(
