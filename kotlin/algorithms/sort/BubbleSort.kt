@@ -1,6 +1,7 @@
 package algorithms.sort
 
 import java.util.Collections
+
 fun bubbleSort(input: List<Int>): List<Int> {
     for (current in 0 until input.size - 1) {
         for (next in current + 1 until input.size) {
