@@ -1,4 +1,6 @@
 import 'binary_search.dart';
+import 'interpolation_search.dart';
+import 'jump_search.dart';
 
 final input = [
   -1,
@@ -28,7 +30,16 @@ void main() {
     input: input,
     expectedValue: expectedValue,
     expectedIndex: expectedIndex,
-    operation: (input, expectedValue) => binarySearch(input, expectedValue),
+    operation: (input, expectedValue) => jumpSearch(input, expectedValue),
+  );
+
+  searchWithStopwatch(
+    name: 'Interpolation search',
+    input: input,
+    expectedValue: expectedValue,
+    expectedIndex: expectedIndex,
+    operation: (input, expectedValue) =>
+        interpolationSearch(input, expectedValue),
   );
 }
 

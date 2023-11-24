@@ -5,9 +5,8 @@ fun interpolationSearch(input: List<Int>, expectedValue: Int): Int {
     var middle = -1
     var high = input.lastIndex
 
-    while(low <= high) {
-
-        middle = low + interpolateValue(low, high, input, expectedValue)
+    while (low <= high) {
+        middle = interpolateValue(low, high, input, expectedValue)
 
         if (input[middle] == expectedValue) {
             return middle
@@ -15,9 +14,7 @@ fun interpolationSearch(input: List<Int>, expectedValue: Int): Int {
 
         if (input[middle] < expectedValue) {
             low = middle + 1
-        }
-
-        if (input[middle] > expectedValue) {
+        } else {
             high = middle - 1
         }
     }

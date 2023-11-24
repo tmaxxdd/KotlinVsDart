@@ -1,6 +1,6 @@
 import 'dart:math';
 
-int binarySearch(List<int> input, int expectedValue) {
+int jumpSearch(List<int> input, int expectedValue) {
   final step = sqrt(input.length).toInt();
   var foundIndex = 0;
   var previousIndex = 0;

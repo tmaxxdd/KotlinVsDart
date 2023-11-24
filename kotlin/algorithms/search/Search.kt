@@ -28,7 +28,7 @@ fun main() {
         input = input,
         expectedValue = expectedValue,
         expectedIndex = expectedIndex,
-        operation = { input, expectedValue -> jumpSearch(input, expectedValue) }
+        operation = { input, expectedValue -> interpolationSearch(input, expectedValue) }
     )
 }
 
