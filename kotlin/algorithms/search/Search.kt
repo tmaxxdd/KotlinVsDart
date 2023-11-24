@@ -22,9 +22,17 @@ fun main() {
         expectedIndex = expectedIndex,
         operation = { input, expectedValue -> jumpSearch(input, expectedValue) }
     )
+
+    searchWithTimeMillis(
+        name = "Interpolation search",
+        input = input,
+        expectedValue = expectedValue,
+        expectedIndex = expectedIndex,
+        operation = { input, expectedValue -> interpolationSearch(input, expectedValue) }
+    )
 }
 
-fun searchWithTimeMillis(
+private fun searchWithTimeMillis(
     name: String,
     input: List<Int>,
     expectedValue: Int,

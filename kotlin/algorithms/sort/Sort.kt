@@ -25,7 +25,7 @@ fun main() {
     ) { mergeSort(it.toMutableList()) }
 }
 
-fun sortWithTimeMillis(
+private fun sortWithTimeMillis(
     name: String,
     input: List<Int>,
     expected: List<Int>,
