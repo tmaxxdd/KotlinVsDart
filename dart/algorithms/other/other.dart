@@ -8,7 +8,7 @@ void main() {
     name: '2nd biggest number search',
     input: [55, -1, MAX_VALUE, 0, 4, 0, 22, MAX_VALUE],
     expectedValue: 55,
-    operation: (input, _) => secondBiggestNumber(input),
+    operation: (input, _) => secondBiggestNumber(input, repeated: false),
   );
 }
 
