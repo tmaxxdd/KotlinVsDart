@@ -23,10 +23,9 @@ List<int> _solve(Map<int, List<int>> graph, int first) {
         visited.add(neighbour);
         result[neighbour] = node;
       }
-      ;
     });
   }
-  ;
+
   return result;
 }
 
