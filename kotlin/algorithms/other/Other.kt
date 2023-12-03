@@ -17,6 +17,27 @@ fun main() {
         expectedValue = listOf(0, 9, 12),
         operation = { input, _ -> kmp(input, "AAB") }
     )
+
+    invokeWithTimeMillis(
+        name = "Find shortest path in graph by BFS",
+        input = mapOf(
+            0 to listOf(7, 9, 11),
+            1 to listOf(8, 10),
+            2 to listOf(3, 12),
+            3 to listOf(2, 4),
+            4 to listOf(3),
+            5 to listOf(6),
+            6 to listOf(5, 7),
+            7 to listOf(0, 3, 6, 11),
+            8 to listOf(1, 9, 12),
+            9 to listOf(0, 8, 10),
+            10 to listOf(1, 9),
+            11 to listOf(0, 7),
+            12 to listOf(2, 8)
+        ),
+        expectedValue = listOf(0, 9, 8, 12),
+        operation = { input, _ -> bfs(input, 0, 12) }
+    )
 }
 
 private fun <I, O> invokeWithTimeMillis(

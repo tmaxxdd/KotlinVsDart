@@ -1,3 +1,4 @@
+import 'bfs.dart';
 import 'kmp.dart';
 import 'second_biggest_number.dart';
 
@@ -17,6 +18,27 @@ void main() {
     input: 'AABAACAADAABAABA',
     expectedValue: [0, 9, 12],
     operation: (input, _) => kmp(input, 'AAB'),
+  );
+
+  invokeWithStopwatch(
+    name: "Find shortest path in graph by BFS",
+    input: {
+      0: [7, 9, 11],
+      1: [8, 10],
+      2: [3, 12],
+      3: [2, 4],
+      4: [3],
+      5: [6],
+      6: [5, 7],
+      7: [0, 3, 6, 11],
+      8: [1, 9, 12],
+      9: [0, 8, 10],
+      10: [1, 9],
+      11: [0, 7],
+      12: [2, 8],
+    },
+    expectedValue: [0, 9, 8, 12],
+    operation: (input, _) => bfs(input, 0, 12),
   );
 }
 
