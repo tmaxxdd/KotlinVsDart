@@ -1,6 +1,7 @@
 package algorithms.other
 
 import algorithms.search.secondBiggestNumber
+import java.util.LinkedList
 import kotlin.system.measureTimeMillis
 
 fun main() {
@@ -37,6 +38,20 @@ fun main() {
         ),
         expectedValue = listOf(0, 9, 8, 12),
         operation = { input, _ -> bfs(input, 0, 12) }
+    )
+
+    invokeWithTimeMillis(
+        name = "Check linked list loop by Floyd's algorithm",
+        input = LinkedList(
+            listOf(
+                Node(1, Node(2)),
+                Node(2, Node(3)),
+                Node(3, Node(2)),
+                Node(4, null),
+            )
+        ),
+        expectedValue = true,
+        operation = { input, _ -> floydsCycle(input) }
     )
 }
 
