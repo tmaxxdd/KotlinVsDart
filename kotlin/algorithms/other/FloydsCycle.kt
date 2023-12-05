@@ -11,6 +11,8 @@ fun floydsCycle(list: LinkedList<Node>): Boolean {
     var slowIndex = 0
     var fastIndex = 0
 
+    if (list.isEmpty()) return false
+
     while (get(list, slowIndex) != null
         && get(list, fastIndex) != null
         && get(list, fastIndex)?.next != null

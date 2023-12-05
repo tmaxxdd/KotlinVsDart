@@ -1,4 +1,7 @@
+import 'dart:collection';
+
 import 'bfs.dart';
+import 'floyds_cycle.dart';
 import 'kmp.dart';
 import 'second_biggest_number.dart';
 
@@ -39,6 +42,23 @@ void main() {
     },
     expectedValue: [0, 9, 8, 12],
     operation: (input, _) => bfs(input, 0, 12),
+  );
+
+  invokeWithStopwatch(
+    name: "Check linked list loop by Floyd's cycle algorithm",
+    input: LinkedList<EntryItem>()
+      ..addAll(
+        [
+          EntryItem(1),
+          EntryItem(2),
+          EntryItem(3),
+          EntryItem(2),
+          EntryItem(2),
+          EntryItem(4)
+        ],
+      ),
+    expectedValue: true,
+    operation: (input, _) => floydsCycle(input),
   );
 }
 
